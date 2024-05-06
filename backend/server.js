@@ -5,6 +5,7 @@ import path from 'path';
 import cors from 'cors';
 
 
+
 const app = express();
 
 app.use(cors());
@@ -14,11 +15,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
 
+// Assuming your build directory is named "build"
+app.use(express.static(path.join(__dirname, 'build')));
 
-// Define route for rendering the form
-// app.get('/', (req, res) => {
-//   res.render('form');
-// });
+// All other routes (optional)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html')); // Serve your app's main HTML file
+});
 
 // Define route for processing form submission
 app.post('/calculate', (req, res) => {
