@@ -16,9 +16,9 @@ app.set('view engine', 'ejs')
 
 
 // Define route for rendering the form
-app.get('/', (req, res) => {
-  res.render('form');
-});
+// app.get('/', (req, res) => {
+//   res.render('form');
+// });
 
 // Define route for processing form submission
 app.post('/calculate', (req, res) => {
