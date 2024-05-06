@@ -15,14 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
 
-// Assuming your build directory is named "build"
-app.use(express.static(path.join(__dirname, 'build')));
-
-// All other routes (optional)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html')); // Serve your app's main HTML file
-});
-
 // Define route for processing form submission
 app.post('/calculate', (req, res) => {
   const result = performCalculations(req.body);
