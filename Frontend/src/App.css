@@ -1,0 +1,20 @@
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --glass-bg-color: rgba(255, 255, 255, 0.3); /* Background color with opacity */
+    --glass-shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color with opacity */
+  }
+
+  body {
+    background-color: var(--glass-bg-color);
+    box-shadow: inset 0 0 0 2000px var(--glass-shadow-color);
+  }
+  
+body {
+    font-family: 'Nunito', sans-serif;
+    /* background-color: black;   */
+    /* background-image: url('./assets/chemical-formula-outlines-on-whiteboard-600nw-732477289.webp'); */
+}

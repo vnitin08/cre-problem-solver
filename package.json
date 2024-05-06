@@ -1,0 +1,20 @@
+{
+  "name": "cre_backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "odex": "^3.0.0-rc.4"
+  }
+}
